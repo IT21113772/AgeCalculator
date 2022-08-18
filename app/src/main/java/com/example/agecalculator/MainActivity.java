@@ -31,17 +31,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void calculate(View view) {
 
-        if (!edtYear.getText().toString().isEmpty()) {
-            int birthYear = Integer.parseInt(edtYear.getText().toString());
-            int currentYear = Integer.parseInt(new SimpleDateFormat("yyyy").format(new Date()));
+        int birthYear = Integer.parseInt(edtYear.getText().toString());
+        int currentYear = Integer.parseInt(new SimpleDateFormat("yyyy").format(new Date()));
 
+        if (!edtYear.getText().toString().isEmpty() && (birthYear <= currentYear)) {
             //txtMessage.setText("You are " + (currentYear - birthYear) + " years old");
             txtMessage.setText(getResources().getString(R.string.message, (currentYear - birthYear)));
         } else {
             //Toast.makeText(this, "Please add a valid year", Toast.LENGTH_SHORT).show();
             Toast.makeText(this, getResources().getString(R.string.error1), Toast.LENGTH_SHORT).show();
         }
-
-
     }
 }
