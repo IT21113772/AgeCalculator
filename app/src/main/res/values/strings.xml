@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AgeCalculator</string>
+    <string name="hntValue">Eg: 1960</string>
+    <string name="message">You are %d years old</string>
+    <string name="error1">Please enter a valid year</string>
+    <string name="title">Calculate Age</string>
+</resources>
